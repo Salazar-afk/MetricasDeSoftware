@@ -1,0 +1,26 @@
+Integridad
+La integridad del software se ha vuelto cada vez más importante en la era de los ciberterroristas y hackers. Este atributo mide la habilidad de un sistema para resistir ataques (tanto accidentales como intencionales) a su seguridad. Los ataques pueden hacerse en los tres componentes de software: programas, datos y documentación.
+Para medir la integridad, deben definirse dos atributos que son: amenaza y seguridad. Amenaza es la probabilidad de que un ataque de un tipo específico ocurrirá dentro de un tiempo dado y seguridad es la probabilidad de que el ataque de un tipo específico se repelerá.
+ La integridad de un sistema puede definirse entonces como:
+Integridad  [1  (amenaza  (1  seguridad))]
+Por ejemplo, si la amenaza (la probabilidad de que un ataque ocurrirá) es de 0.25 y la seguridad (la probabilidad de repeler un ataque) es de 0.95, la integridad del sistema es 0.99 (muy alta). Si, por otra parte, la probabilidad de amenaza es 0.50 y la probabilidad de repeler un ataque es de solamente 0.25, la integridad del sistema es 0.63 (inaceptablemente baja).
+Las pruebas de integración son una técnica sistemática para construir la arquitectura del software mientras se llevan a cabo pruebas para descubrir errores asociados con la interfaz.
+El objetivo es tomar los componentes probados de manera individual y construir una estructura de programa que se haya dictado por diseño.
+La integración incremental es la antítesis del enfoque big bang. El programa se construye y prueba en pequeños incrementos, donde los errores son más fáciles de aislar y corregir; las interfaces tienen más posibilidades de probarse por completo; y puede aplicarse un enfoque de prueba sistemático.
+La prueba de integración descendente es un enfoque incremental a la construcción de la arquitectura de software. Los módulos se integran al moverse hacia abajo a través de la jerarquía de control, comenzando con el módulo de control principal (programa principal). Los módulos subordinados al módulo de control principal se incorporan en la estructura en una forma de primero en profundidad o primero en anchura.
+El proceso de integración se realiza en una serie de cinco pasos:
+ 1. El módulo de control principal se usa como un controlador de prueba y los representantes (stubs) se sustituyen con todos los componentes directamente subordinados al módulo de control principal. 
+2. Dependiendo del enfoque de integración seleccionado (es decir, primero en profundidad o anchura), los representantes subordinados se sustituyen uno a la vez con componentes reales. 3. Las pruebas se llevan a cabo conforme se integra cada componente. 
+4. Al completar cada conjunto de pruebas, otro representante se sustituye con el componente real. 
+5. Las pruebas de regresión (que se analizan más adelante en esta sección) pueden realizarse para asegurar que no se introdujeron nuevos errores.
+La estrategia de integración descendente verifica los principales puntos de control o de decisión al principio en el proceso de prueba. En una estructura de programa “bien factorizada”, la toma de decisiones ocurre en niveles superiores en la jerarquía y, por tanto, se encuentra primero.
+Si existen grandes problemas de control, el reconocimiento temprano es esencial. Si se selecciona la integración primero en profundidad, es posible implementar y demostrar un funcionamiento completo del software. La demostración temprana de la capacidad funcional es un constructor de confianza para todos los participantes.
+Integración ascendente. La prueba de integración ascendente, como su nombre implica, comienza la construcción y la prueba con módulos atómicos (es decir, componentes en los niveles inferiores dentro de la estructura del programa). Puesto que los componentes se integran de abajo hacia arriba, la funcionalidad que proporcionan los componentes subordinados en determinado nivel siempre está disponible y se elimina la necesidad de representantes (stubs). 
+Una estrategia de integración ascendente puede implementarse con los siguientes pasos:
+1. Los componentes en el nivel inferior se combinan en grupos (en ocasiones llamados
+construcciones o builds) que realizan una subfunción de software específica.
+2. Se escribe un controlador (un programa de control para pruebas) a fin de coordinar la
+entrada y salida de casos de prueba.
+3. Se prueba el grupo.
+4. Los controladores se remueven y los grupos se combinan moviéndolos hacia arriba en la estructura del programa.
+Prueba de regresión. Cada vez que se agrega un nuevo módulo como parte de las pruebas de integración, el software cambia. Se establecen nuevas rutas de flujo de datos, ocurren nuevas operaciones de entrada/salida y se invoca nueva lógica de control. Dichos cambios pueden causar problemas con las funciones que anteriormente trabajaban sin fallas. En el contexto de una estrategia de prueba de integración, la prueba de regresión es la nueva ejecución de algún subconjunto de pruebas que ya se realizaron a fin de asegurar que los cambios no propagaron efectos colaterales no deseados.
