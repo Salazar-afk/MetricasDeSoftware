@@ -1,0 +1,13 @@
+3c) Capacidad de mantenimiento.
+
+El mantenimiento es una de las etapas clave del ciclo de vida de un producto, pero algunas veces es olvidada o sólamente vista de forma somera. 
+El mantenimiento es esencial para preservar la utilidad de una aplicación e incluso aumentar el valor de la misma.
+
+La capacidad de mantenimiento es la facilidad con la que un programa puede corregirse en caso de encontrar errores, o de adaptarse en caso de que el entorno en el que ejecuta la aplicación cambia. 
+Esta capacidad de mantenimiento debe establecerce lo antes posible en el diseño de la solución informática, incluso en las primeras etapas de esbozo de conceptos.
+
+No hay una manera directa de medir la capacidad de mantenimiento de un software. Una manera aproximada es usar el Tiempo Medio al Cambio (TMC), que es el tiempo estimado que se tarda en analizar la mejora solicitada, implementar, probar y distribuir el cambio al cliente.
+
+Un programa que tenga un diseño abierto y modular tendrá un TMC mucho menor que una solución monolítica o poco flexible.
+
+Un ejemplo de capacidad me mantenimiento se puede apreciar si nos remontamos a fines el sXX, con el problema del Y2K: muchas aplicaciones registraban las fechas con dos dígitos y eso suponía un problema cuando el cambio de siglo se produzca. Miles de programadores tuvieron que gastar horas para solucionar el problema. En un sistema flexible, no supondría muchos problemas realizar el cambio.
