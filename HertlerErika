@@ -1,0 +1,11 @@
+Orientadas a funcion: 
+
+Son medidas indirectas del software y del proceso. Se centran en la funcionalidad y la utilidad 
+del programa. Emplean como un valor de normalización una medida de la funcionalidad que entrega la aplicación. 
+La métrica orientada a la función utilizada con mayor amplitud es el punto de función (PF).
+La Reconciliacion de metricas LOC y PF es la relacion entre lineas de codigo y puntos de funcion y es dependiente del Lenguaje 
+de programacion que se usa en el software y la calidad del diseño.
+Estas medidas (LOC y PF) sirven para calcular metricas de productividad, y que muchos factores se malintepreten con facilidad.
+Los puntos de funcion y las metricas que son basadas en LOC son precisos en el desarrollo del software.
+En las metricas de proceso y proyecto debe centrarse en la productividad y la calidad como funcion del esfuerzo y el tiempo
+del desarrollo de software, y poder asi mejorar el proceso del proyecto.
